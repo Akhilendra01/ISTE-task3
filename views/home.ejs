@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Home</h1>
+    <a href="/home/create">Create</a>
+    <!-- <a href="/home/:id/delete">Delete</a>
+    <a href="/home/:id/update">Update</a> -->
+    <ul>
+        <% for(let item of data) {%>
+            <li>Name:<%=item.name%> Price: <%= item.price %> <a href="/home/<%= item.id%>">Details</a></li>
+        <% } %>
+    </ul>
+    
+</body>
+</html>
